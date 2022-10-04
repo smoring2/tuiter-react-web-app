@@ -141,10 +141,6 @@
     width: 100px;
     height: 100px;
     border-radius: 20px;
-    margin-right: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 10px;
 }
 
 .wd-container-posts-space-no-border {
@@ -186,18 +182,32 @@
     height: 48px;
     border-radius: 24px;
 }
+
 .wd-post {
 }
+
 .wd-container-post {
     display: flex;
 }
+
 .wd-author {
     font-size: 15px;
     font-weight: bold;
     color: white;
 }
+
 .wd-username {
     font-size: 15px;
     color: lightgray;
 }
 
+.wd-search-tuiter {
+    bottom: 10px;
+    left:15px;
+    color: gray;
+}
+.wd-fa-stack-1x {
+    left:0;
+    position: absolute;
+    width: 100%;
+}
