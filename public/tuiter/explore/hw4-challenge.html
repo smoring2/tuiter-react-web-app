@@ -2,13 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Explore</title>
+    <title>Explore Challenge</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
           rel="stylesheet"/>
-    <link href="index.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-          rel="stylesheet"/>
+    <link href="challenge.css" rel="stylesheet">
+    <link href="../../vendors/fontawesome6/css/all.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="wd-body">
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+            <div class="list-group">
+                <a href="#Twitter" class="list-group-item wd-list-group-item list-group-item-action">
+                    <i class="fa-soild fa-t nv-link"></i>
+                </a>
+                <a href="#Home" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="fa fa-house"></i>                        </div>
+                        <div class="d-none d-xl-block col-xl-10 col-xxl-10">Home</div>
+                    </div>
+                </a>
+                <a href="#Explore" class="list-group-item wd-list-group-item list-group-item-action active">
+                    <div class="row">
+                        <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="fa fa-hashtag fa-1x"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-10 col-xxl-10">Explore</div>
+                    </div>
+                </a>
+                <a href="#Notification" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-2 col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-10 col-xxl-10">Notification</div>
+                    </div>
+                </a>
+                <a href="#Messages" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-2 col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-10 col-xxl-10">Messages</div>
+                    </div>
+                </a>
+                <a href="#Bookmarks" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-10 col-xxl-10">Bookmarks</div>
+                    </div>
+                </a>
+                <a href="#Lists" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="fa fa-list fa-1x"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-2 col-xxl-2">Lists</div>
+                    </div>
+                </a>
+                <a href="#Profile" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="d-none  d-xl-block col-xl-2 col-xxl-2">Profile</div>
+                    </div>
+                </a>
+                <a href="#More" class="list-group-item wd-list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
+                            <span class="fa-stack fa-1x" style="height: 24px">
+                                <i class="far fa-circle wd-fa-stack-1x"></i>
+                                <i class="fas fa-ellipsis-h wd-fa-stack-1x-dots fa-inverse" style="font-size: 10px"></i>
+                            </span></br>
+                        </div>
+                        <div class="d-none d-xl-block col-xl-10 col-xxl-10">More</div>
+                    </div>
+                </a>
+            </div>
+            <button class="btn btn-primary rounded-pill w-100 mt-2 mb-2">Tweet</button>
+        </div>
+        <div class="col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6">
+            <div class="row wd-search-bar pb-2 wd-row wd-border" style="align-items: center">
+                <div class="col-10">
+                    <div class="position-relative">
+                        <input class="form-control rounded-pill ps-5 wd-input" placeholder="Search Twitter"/>
+                        <i class="fa fa-search position-absolute wd-search-tuiter"></i>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-cog fa-2x fa-1x float-end wd-gear-color"></i>
+                </div>
+            </div>
+            <ul class="nav nav-tabs wd-tabs pb-2 nav-fill wd-middle-padding">
+                <li class="nav-item">
+                    <a class="nav-link wd-nav-link" href="for-you.html">For you</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-nav-link" href="trending.html">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item wd-nav-link">
+                    <a class="nav-link wd-nav-link" href="sports.html">Sports</a>
+                </li>
+                <li class="d-none d-md-block nav-item">
+                    <a class="nav-link wd-nav-link active" href="entertainment.html">Entertainment</a>
+                </li>
+            </ul>
+            <div>
+                <img src="music.jpeg" width="100%" class="wd-border"/>
+                <div class="pt-2 pb-2 wd-border wd-border-bottom wd-middle-padding" style="color: white;">
+                    Music · Last night
+                    <div>
+                        <span class="h2">BTS and Coldplay release their new song, My Universe</span>
+                        <img src="planet.png"
+                             style="display: inline; height: 2em; width: auto; vertical-align: baseline"/></d>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-group wd-border-bottom wd-border">
+                <li class="list-group-item wd-list-group-item">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="text-secondary">
+                                Trending in R&B & Soul
+                            </div>
+                            <div class="fw-bolder">
+                                R Kelly
+                            </div>
+                            <div class="text-secondary">
+                                18.2K Tweets
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <i class="fas fa-ellipsis-h float-end" style="color:gray;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item wd-list-group-item">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="text-secondary">
+                                Trending in R&B & Soul
+                            </div>
+                            <div class="fw-bolder">
+                                Chloe
+                            </div>
+                            <div class="text-secondary">
+                                Trending with
+                                <a href="#Halle" style="text-decoration: none">Halle</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <i class="fas fa-ellipsis-h float-end" style="color:gray;"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item wd-list-group-item">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="wd-container-post-info-organization" style="align-items: center">
+                                <i class="fa-solid fa-t"></i>
+                                <div class="fw-bolder me-1 ms-1">The Times</div>
+                                <i class="fa fa-check-circle"></i>
+                                <div class="wd-break-point">·</div>
+                                <div class="text-secondary">September 24, 2021</div>
+                            </div>
+                            <div class="fw-bolder">
+                                Stanley Tucci: 'Food or sex? That's the crullest question...'
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img src="stanley.jpeg" width="100px" class="float-end wd-post-de-img"/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="d-none  d-lg-block col-lg-4 col-xl-4 col-xxl-4">
+            <ul class="list-group">
+                <li class="list-group-item wd-list-group-item-gray h4 m-0 rounded wd-top-rounded" style="color: white">
+                    Who to follow
+                </li>
+                <li class="list-group-item wd-list-group-item-gray">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <img src="data:image/png;base64,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"
+                                 width="40px" class="rounded-circle"/>
+                        </div>
+                        <div class="col-7">
+                            <span class="fw-bolder me-1" style="color:white;">The Babylon Bee</span>
+                            <i class="fa-solid fa-circle-check" style="color:white;"></i>
+                            <div class="text-secondary">
+                                @TheBabylonBee
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light wd-btn rounded-pill float-end align-middle">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item wd-list-group-item-gray">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGmX9z3w4fB3nvQiyGHGaGD0Oj0NGXl_b4g&usqp=CAU"
+                                 width="40px" height="40px" class="rounded-circle"/>
+                        </div>
+                        <div class="col-7">
+                            <span class="fw-bolder me-1" style="color:white;">Jack Posobiec</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_the_United_States_%281795%E2%80%931818%29.svg/220px-Flag_of_the_United_States_%281795%E2%80%931818%29.svg.png"
+                                 style="display: inline; height: 1em; width: auto; vertical-align: baseline"/></d>
+                            <i class="fa-solid fa-circle-check" style="color:white;"></i>
+                            <div class="text-secondary">
+                                @JackPosobiec
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light wd-btn rounded-pill float-end align-middle">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="wd-list-group-item wd-list-group-item-gray rounded wd-bottom-rounded" style="padding: 12px;">
+                    <a href="showmore.html" style="text-decoration: none">Show more</a>
+                </li>
+
+            </ul>
+            <div class="row p-2">
+                <div class="col-xl-6 col-xxl-4  text-secondary small">Terms of Service</div>
+                <div class="col-xl-6 col-xxl-4 text-secondary small">Privacy Policy</div>
+                <div class="col-xl-6 col-xxl-4 text-secondary small">Cookie Policy</div>
+                <div class="col-xl-6 col-xxl-3 text-secondary small">Ads Info</div>
+                <div class="col-xl-6 col-xxl-2 text-secondary small">More...</div>
+                <div class="col-xl-6 col-xxl-5 text-secondary small">@2021 Twitter, Inc.</div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
