@@ -20,7 +20,7 @@ const PostListItems = (postItem) => {
                                         <div class="p-1"> ${postItem.post.postTitle}</div>
                                         <div class="p-1 text-secondary" style="width: 100%;"> ${postItem.post.postContent}</div>
                                     </div>
-                                </div>`:
+                                </div>` :
         `<div> 
                                     <img src = ${postItem.image} class="rounded border border-secondary" style="width: 100%;">
                                 </div>`}

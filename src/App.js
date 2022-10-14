@@ -15,7 +15,7 @@ function App() {
                 <Routes>
                     <Route index element={<Labs/>}/>
                     <Route path="/hello" element={<HelloWorld/>}/>
-                    <Route path="/tuiter" element={<Tuiter/>}/>
+                    <Route path="/tuiter/*" element={<Tuiter/>}/>
                 </Routes>
                 {/*<h1>Footer</h1>*/}
             </div>
