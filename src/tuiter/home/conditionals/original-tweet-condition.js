@@ -18,7 +18,7 @@ const OriginalTweetCondition = ({
             return (
                 <div className="rounded-4 border border-secondary p-2">
                     <div className="d-flex align-items-center">
-                        <img className="rounded-circle wd-original-avatar me-1"
+                        <img className="rounded-circle wd-original-avatar me-1" alt=""
                              src={`/images/${originalTweet.avatarIcon}`}/>
                         <div className="fw-bold pe-1">{originalTweet.userName}</div>
                         <i className="bi bi-check-circle-fill table-primary pe-1" style={{color: "#0096FF"}}></i>

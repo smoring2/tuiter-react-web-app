@@ -10,7 +10,7 @@ const ImageCondition = ({
         if (image.hasImage) {
             return (
                 <div>
-                    <img src={`/images/${image.image}`} className="rounded-4 pt-2 pb-2" style={{width: "100%"}}/>
+                    <img src={`/images/${image.image}`} className="rounded-4 pt-2 pb-2" style={{width: "100%"}} alt=""/>
                 </div>
             );
         } else {
