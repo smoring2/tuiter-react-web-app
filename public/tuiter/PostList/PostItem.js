@@ -5,11 +5,15 @@ const PostListItems = (postItem) => {
        <image class="rounded-pill" src=${postItem.avatarIcon} style="width: 48px; height: 48px;"></image>
        <div>
        <div class="flex-container-flex ps-2">
-         <div class="d-flex" style="align-items: center">
+       <div class="row">
+         <div class="d-flex col-10" style="align-items: center">
            <div class="fw-bold">${postItem.userName}</div>
            <i class="fa fa-check-circle ms-2 me-2"></i>
            <div class="text-secondary">@${postItem.handle}</div>
            <div class="text-secondary ms-2">· ${postItem.time}</div>
+         </div>
+         <div class="col-2">
+         <i class="fa fa-ellipsis-h float-end text-secondary"></i></div>
          </div>
          <div class="mb-2">${postItem.title}</div>
          
@@ -20,7 +24,7 @@ const PostListItems = (postItem) => {
                                         <div class="p-1"> ${postItem.post.postTitle}</div>
                                         <div class="p-1 text-secondary" style="width: 100%;"> ${postItem.post.postContent}</div>
                                     </div>
-                                </div>`:
+                                </div>` :
         `<div> 
                                     <img src = ${postItem.image} class="rounded border border-secondary" style="width: 100%;">
                                 </div>`}
