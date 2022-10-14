@@ -22,19 +22,19 @@ const NavigationSidebar = () => {
                     ${active === 'notification' ? 'active' : ''}`} href="#notifications">
                 Notifications</a>
             <a className={`list-group-item
-                    ${active === 'messages' ? 'active' : ''}`} href="#">
+                    ${active === 'messages' ? 'active' : ''}`} href="#messages">
                 Messages</a>
             <a className={`list-group-item
-                    ${active === 'bookmarks' ? 'active' : ''}`} href="#">
+                    ${active === 'bookmarks' ? 'active' : ''}`} href="#bookmarks">
                 Bookmarks</a>
             <a className={`list-group-item
-                    ${active === 'lists' ? 'active' : ''}`} href="#">
+                    ${active === 'lists' ? 'active' : ''}`} href="#lists">
                 Lists</a>
             <a className={`list-group-item
-                    ${active === 'profile' ? 'active' : ''}`} href="#">
+                    ${active === 'profile' ? 'active' : ''}`} href="#profile">
                 Profile</a>
             <a className={`list-group-item
-                    ${active === 'more' ? 'active' : ''}`} href="#">
+                    ${active === 'more' ? 'active' : ''}`} href="#more">
                 More</a>
         </div>
     );
