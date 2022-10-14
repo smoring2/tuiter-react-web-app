@@ -6,10 +6,15 @@ const PostListItems = (postItem) => {
        <div>
        <div class="flex-container-flex ps-2">
          <div class="d-flex" style="align-items: center">
+       <div class="row">
+         <div class="d-flex col-10" style="align-items: center">
            <div class="fw-bold">${postItem.userName}</div>
            <i class="fa fa-check-circle ms-2 me-2"></i>
            <div class="text-secondary">@${postItem.handle}</div>
            <div class="text-secondary ms-2">· ${postItem.time}</div>
+         </div>
+         <div class="col-2">
+         <i class="fa fa-ellipsis-h float-end text-secondary"></i></div>
          </div>
          <div class="mb-2">${postItem.title}</div>
          
