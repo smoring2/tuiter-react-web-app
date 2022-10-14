@@ -1,4 +1,5 @@
 import React from "react";
+import ReferLinkCondition from "./refer-link-condition";
 
 const OriginalTweetCondition = ({
                                     originalTweet = {
@@ -24,7 +25,12 @@ const OriginalTweetCondition = ({
                         <div
                             className="text-secondary"> @{originalTweet.handle} · {originalTweet.time}</div>
                     </div>
-                    <div className="text-secondary">{originalTweet.content}</div>
+                    <div className="text-secondary">{originalTweet.content}
+                        <ReferLinkCondition referLink={{
+                            "hasReferLink":originalTweet.hasReferLink,
+                            "referLink": `${originalTweet.referLink}`
+                        }}/>
+                    </div>
                 </div>
             );
         } else {

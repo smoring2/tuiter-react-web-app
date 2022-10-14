@@ -3,6 +3,7 @@ import RetweetCondition from "./conditionals/retweet-condition";
 import ImageCondition from "./conditionals/image-condition";
 import OriginalTweetCondition from "./conditionals/original-tweet-condition";
 import ThreadCondition from "./conditionals/thread-condition";
+import ReferLinkCondition from "./conditionals/refer-link-condition";
 
 const TweetItem = ({
                        tweet =
@@ -51,8 +52,10 @@ const TweetItem = ({
                     </div>
                     <div className="mb-2">
                         <span className="text-secondary">{tweet.content}</span>
-                        <i className="d-inline bi bi-arrow-right"></i>
-                        <a href={`${tweet.referLink}`}></a>
+                        <ReferLinkCondition referLink={{
+                            "hasReferLink":tweet.hasReferLink,
+                            "referLink": `${tweet.referLink}`
+                        }}/>
                     </div>
                     <ImageCondition image={{"hasImage": tweet.hasImage, "image": `${tweet.image}`}}/>
                     <OriginalTweetCondition originalTweet={{
