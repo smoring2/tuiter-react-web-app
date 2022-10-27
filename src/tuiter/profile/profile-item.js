@@ -31,8 +31,8 @@ const ProfileItem = (
                 </div>
             </div>
             <div className="pos-relative">
-                <img className="wd-polyglot" src={`/images/${profile.bannerPicture}`}/>
-                <img className="wd-avatar rounded-circle" src={`/images/${profile.profilePicture}`}/>
+                <img className="wd-polyglot" src={`/images/${profile.bannerPicture}`}  style={{alt:""}}/>
+                <img className="wd-avatar rounded-circle" src={`/images/${profile.profilePicture}`}  style={{alt:""}}/>
                 <button className="btn btn-light wd-edit-btn">Edit Profile</button>
             </div>
         </div>
