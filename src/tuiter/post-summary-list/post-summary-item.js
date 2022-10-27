@@ -1,7 +1,10 @@
 import React from "react";
+
 const PostSummaryItem = (
     {
+        key = 123,
         post = {
+            "id": 1,
             "topic": "Space",
             "userName": "SpaceX",
             "time": "2h",
@@ -10,7 +13,7 @@ const PostSummaryItem = (
         }
     }
 ) => {
-    return(
+    return (
         <li className="list-group-item">
             <div className="row">
                 <div className="col-10">

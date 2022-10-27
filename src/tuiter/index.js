@@ -1,32 +1,45 @@
 import React from "react";
 import ExploreComponent from "./explore";
-import NavigationSidebar from "./navigation-sidebar";
-import HomeComponent from "./home";
-import WhoToFollowList from "./who-to-follow-list";
+import NavigationSidebar
+    from "./navigation-sidebar";
+import WhoToFollowList
+    from "./who-to-follow-list";
 import {Routes, Route} from "react-router";
-import Nav from "../nav";
+import whoReducer
+    from "./reducers/who-reducer";
+import postReducer from "./reducers/posts-reducer";
+import tuitReducer from "./tuits/tuits-reducer";
+import {configureStore}
+    from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+import HomeComponent from "./home";
+import ProfileComponent from "./profile";
+
+const store = configureStore(
+    {reducer: {who: whoReducer, posts: postReducer, tuits: tuitReducer}});
 
 function Tuiter() {
     return (
-        <div>
-            <Nav/>
-        <div className="row mt-2">
-            <div className="col-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-                <NavigationSidebar active="explore"/>
+        <Provider store={store}>
+            <div>
+                <div className="row mt-2">
+                    <div className="col-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+                        <NavigationSidebar active="home"/>
+                    </div>
+                    <div className="col-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6"
+                         style={{"position": "relative"}}>
+                        <Routes>
+                            <Route index element={<HomeComponent/>}/>
+                            <Route path="explore" element={<ExploreComponent/>}/>
+                            <Route path="profile" element={<ProfileComponent/>} />
+                        </Routes>
+                    </div>
+                    <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
+                        <WhoToFollowList/>
+                    </div>
+                </div>
             </div>
-            <div className="col-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6"
-                 style={{"position": "relative"}}>
-                <Routes>
-                    <Route path="home" element={<HomeComponent/>}/>
-                    <Route path="explore" element={<ExploreComponent/>}/>
-                </Routes>
-            </div>
-            <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
-                <WhoToFollowList/>
-            </div>
-        </div>
-        </div>
-
+        </Provider>
     );
 }
 

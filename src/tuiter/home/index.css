@@ -1,4 +1,4 @@
-.wd-avatar {
+.wd-profile-avatar {
     width: 48px;
     height: 48px;
 }
@@ -9,7 +9,10 @@
     height: 24px;
 }
 
-.wd-link{
+.wd-link {
     text-decoration: none;
 }
 
+.wd-liked-color {
+    color: red;
+}

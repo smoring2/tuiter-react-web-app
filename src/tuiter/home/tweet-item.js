@@ -37,7 +37,7 @@ const TweetItem = ({
         <div className="border p-2 flex-container-flex">
             <RetweetCondition retweet={{"retweeted": tweet.retweeted, "retweetUser": `${tweet.retweetUser}`}}/>
             <div className="d-flex pb-2">
-                <img className="rounded-circle wd-avatar" alt=""
+                <img className="rounded-circle wd-profile-avatar" alt=""
                      src={`/images/${tweet.avatarIcon}`}/>
                 <div className="flex-container-flex ps-2">
                     <div className="row">

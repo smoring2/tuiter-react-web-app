@@ -5,6 +5,7 @@ import {useLocation} from "react-router";
 const NavigationSidebar = () => {
     const {pathname} = useLocation();
     const paths = pathname.split('/')
+    const isHome = paths.length === 2;
     const active = paths[2];
     return (
         <div className="list-group">
@@ -17,7 +18,7 @@ const NavigationSidebar = () => {
                 </div>
             </a>
 
-            <Link to="/tuiter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}>
+            <Link to="/tuiter" className={`list-group-item ${(isHome || active=== '')? 'active' : ''}`}>
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
                         <i className="bi bi-house-fill"></i>
@@ -36,7 +37,7 @@ const NavigationSidebar = () => {
             <Link to="/" className="list-group-item">
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
-                        <i className="bi bi-tag"></i>
+                        <i className="bi bi-asterisk"></i>
                     </div>
                     <div className="d-none d-xl-block col-xl-10 col-xxl-10">Labs</div>
                 </div>
@@ -54,7 +55,7 @@ const NavigationSidebar = () => {
                     ${active === 'messages' ? 'active' : ''}`} href="#messages">
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
-                        <i className="bi bi-envelope-fill"></i>
+                        <i className="bi bi-envelope"></i>
                     </div>
                     <div className="d-none d-xl-block col-xl-10 col-xxl-10">Messages</div>
                 </div>
@@ -63,7 +64,7 @@ const NavigationSidebar = () => {
                     ${active === 'bookmarks' ? 'active' : ''}`} href="#bookmarks">
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
-                        <i className="bi bi-bookmark-fill"></i>
+                        <i className="bi bi-bookmark"></i>
                     </div>
                     <div className="d-none d-xl-block col-xl-10 col-xxl-10">Bookmarks</div>
                 </div>
@@ -77,15 +78,15 @@ const NavigationSidebar = () => {
                     <div className="d-none d-xl-block col-xl-10 col-xxl-10">Lists</div>
                 </div>
             </a>
-            <a className={`list-group-item
-                    ${active === 'profile' ? 'active' : ''}`} href="#profile">
+            <Link to="/tuiter/profile" className={`list-group-item
+                    ${active === 'profile' ? 'active' : ''}`}>
                 <div className="row">
                     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2">
-                        <i className="bi bi-person-fill"></i>
+                        <i className="bi bi-person"></i>
                     </div>
                     <div className="d-none d-xl-block col-xl-10 col-xxl-10">Profile</div>
                 </div>
-            </a>
+            </Link>
             <a className={`list-group-item
                     ${active === 'more' ? 'active' : ''}`} href="#more">
                 <div className="row">
