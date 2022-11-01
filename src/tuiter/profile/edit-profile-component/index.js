@@ -2,7 +2,7 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {updateProfile} from "../profile-reducer";
 import {Link} from "react-router-dom";
-import {BirthToDateConvert} from "../index"
+// import {BirthToDateConvert} from "../index"
 
 const EditProfileComponent = () => {
     const profile = useSelector(state => state.profile);
