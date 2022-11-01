@@ -10,3 +10,9 @@
 .wd-tuit-width {
     width: 100%;
 }
+
+.wd-stats-button {
+    outline: 0;
+    background: none;
+    border: none;
+}

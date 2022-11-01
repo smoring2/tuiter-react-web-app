@@ -1,4 +1,6 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {likeToggle} from "./tuits-reducer";
 
 const TuitStats = ({
                        tuit =
@@ -19,6 +21,10 @@ const TuitStats = ({
                            }
                    }
 ) => {
+    const dispatch = useDispatch();
+    const likeToggleHandler = (tuit) => {
+        dispatch(likeToggle(tuit))
+    }
     return (
         <div className="row pt-2">
             <div className="col-3">
@@ -28,7 +34,7 @@ const TuitStats = ({
                 <i className="bi bi-arrow-repeat text-secondary"></i><span
                 className="text-secondary ps-2">{tuit.retuits}</span></div>
             <div className="col-3 text-secondary">
-                <i className={`${tuit.liked ? `bi bi-heart-fill wd-liked-color` : `bi bi-heart`}`}></i>
+                <button onClick={() => likeToggleHandler(tuit)} className={`${tuit.liked ? `bi bi-heart-fill wd-liked-color wd-stats-button` : `bi bi-heart wd-stats-button`}`}></button>
                 <span
                     className="ps-2">{tuit.likes}</span>
             </div>

@@ -13,9 +13,27 @@
     background-color: white;
 }
 
-.wd-edit-btn {
+.wd-pictures {
+    height:48px;
+    width: 36px;
+    background: gainsboro;
+}
+
+.wd-banner-camera-pos {
     position: relative;
-    font-weight: bold;
-    bottom: 0px;
-    right: 100px;
+    bottom: 150px;
+    left: 180px;
+}
+
+.wd-banner-x-pos {
+    position: relative;
+    bottom: 150px;
+    left: 100px;
+}
+
+.wd-avatar-camera-pos {
+    position: relative;
+    bottom: 50px;
+    left: -68px;
+    z-index: 2;
 }
