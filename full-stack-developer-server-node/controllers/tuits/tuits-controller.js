@@ -13,7 +13,7 @@ const findTuits = (req, res) =>
     res.json(tuits);
 
 const updateTuit = (req, res) => {
-    const tuitdIdToUpdate = req.params.tid;
+    const tuitdIdToUpdate = parseInt(req.params.tid);
     const updates = req.body;
     tuits = tuits.map(t =>
         t._id === tuitdIdToUpdate ?
@@ -22,7 +22,7 @@ const updateTuit = (req, res) => {
 }
 
 const deleteTuit = (req, res) => {
-    const tuitdIdToDelete = req.params.tid;
+    const tuitdIdToDelete = parseInt(req.params.tid);
     tuits = tuits.filter(t => t._id !== tuitdIdToDelete);
     res.sendStatus(200);
 }
