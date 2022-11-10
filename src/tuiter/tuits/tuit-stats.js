@@ -25,9 +25,9 @@ const TuitStats = ({
                    }
 ) => {
     const dispatch = useDispatch();
-    const likeToggleHandler = (tuit) => {
-        dispatch(likeToggle(tuit))
-    }
+    // const likeToggleHandler = (tuit) => {
+    //     dispatch(likeToggle(tuit))
+    // }
     return (
         <div className="row pt-2">
             <div className="col-2">
