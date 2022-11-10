@@ -1,14 +1,9 @@
 import TuitItem from "./tuit-item";
 import "./index.css";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {findTuitsThunk}
     from "../../services/tuits-thunks";
-import {
-    createTuit,
-    deleteTuit,
-    findTuits
-} from "../../actions/tuits-actions";
 
 
 const TuitList = () => {
@@ -18,9 +13,7 @@ const TuitList = () => {
     useEffect(() => {
         dispatch(findTuitsThunk())
     }, [])
-
-    const [newTuit, setNewTuit] =
-        useState({tuit: 'New tuit'});
+    
     return (
         <ul className="list-group">
             {
@@ -29,18 +22,6 @@ const TuitList = () => {
                     Loading...
                 </li>
             }
-            <button onClick={() =>
-                createTuit(dispatch, newTuit)}
-                    className="btn btn-primary float-end">
-                Tuit
-            </button>
-            <textarea className="form-control w-75"
-                      onChange={(e) =>
-                          setNewTuit({
-                              ...newTuit,
-                              tuit: e.target.value
-                          })}></textarea>
-
             {
                 tuits.map(tuit =>
                     <TuitItem key={tuit._id} tuit={tuit}/>

@@ -8,7 +8,7 @@ import {Routes, Route} from "react-router";
 import whoReducer
     from "./reducers/who-reducer";
 import postReducer from "./reducers/posts-reducer";
-import tuitReducer from "./tuits/tuits-reducer";
+import tuitsReducer from "./tuits/tuits-reducer";
 import profileReducer from "./profile/profile-reducer"
 import {configureStore}
     from '@reduxjs/toolkit';
@@ -18,7 +18,7 @@ import ProfileComponent from "./profile";
 import EditProfileComponent from "./profile/edit-profile-component";
 
 const store = configureStore(
-    {reducer: {who: whoReducer, posts: postReducer, tuits: tuitReducer, profile: profileReducer}});
+    {reducer: {who: whoReducer, posts: postReducer, tuitsData: tuitsReducer, profile: profileReducer}});
 
 function Tuiter() {
     return (
