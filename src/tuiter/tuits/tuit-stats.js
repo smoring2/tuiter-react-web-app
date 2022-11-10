@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {likeToggle} from "./tuits-reducer";
+// import {likeToggle} from "./tuits-reducer";
 import {updateTuitThunk} from "../../services/tuits-thunks";
 
 const TuitStats = ({
