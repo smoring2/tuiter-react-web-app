@@ -15,7 +15,6 @@ export const deleteTuitThunk = createAsyncThunk(
         return parseInt(tuitId);
     })
 
-
 export const createTuitThunk = createAsyncThunk(
     'tuits/createTuit',
     async (tuit) => {
