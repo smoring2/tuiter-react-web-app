@@ -15,10 +15,29 @@ export const deleteTuitThunk = createAsyncThunk(
         return parseInt(tuitId);
     })
 
+const currentUser = {
+    "userName": "NASA",
+    "handle": "@nasa",
+    "image": "nasa.png",
+};
+
+const templateTuit = {
+    ...currentUser,
+    "topic": "Space",
+    "time": "just now",
+    "liked": false,
+    "replies": 0,
+    "retuits": 0
+}
+
 export const createTuitThunk = createAsyncThunk(
     'tuits/createTuit',
     async (tuit) => {
-        return await service.createTuit(tuit)
+        const newTuit = {
+            ...tuit,
+            ...templateTuit,
+        };
+        return await service.createTuit(newTuit)
     }
 )
 
